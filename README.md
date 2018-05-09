@@ -1,3 +1,18 @@
+/***********************************************************************
+/*    This program is free software: you can redistribute it and/or modify
+/*    it under the terms of the GNU General Public License as published by
+/*    the Free Software Foundation, either version 3 of the License, or
+/*    (at your option) any later version.
+/*
+/*    This program is distributed in the hope that it will be useful,
+/*    but WITHOUT ANY WARRANTY; without even the implied warranty of
+/*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+/*    GNU General Public License for more details.
+/*
+/*    You should have received a copy of the GNU General Public License
+/*    along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+
 Dendrometro de precisão para mensurar tamanho inicial e variações de crescimento do diâmetro das árvores (DAP - diametro a altura do peito com casca).
 
 Code by 3ecologias.net <root@3ecologias.net>
@@ -19,3 +34,12 @@ Code by 3ecologias.net <root@3ecologias.net>
    5. o modo de crescimento coleta, a cada minuto, o valor do diâmetro (DAP) e compara com o último valor do DAP para registrar o incremento do diâmetro (ICAd);
    6. o modo de catalogo armazena, a cada minuto, um log em CSV no SDCard com os valores do DAP: inicial, final e o ICAd. 
    7. Para salvar o log, basta voltar o carretel para a posição inicial e aguardar o led vermelho acender. Depois disso, desligue o dispositivo e remova o SDCard.
+
+   info:
+   a pasta printed-circuit/ contém os arquivos PDF para impressão de circuito impresso, o arquivo original para edição pelo Fritizing (http://fritzing.org/), o modelo de montagem de protoboard e o arquivo com a lista de componentes necessários.
+
+   a pasta string-pot-am-2674/ contém os arquivos modelados do sensor para a impressão 3D, fotos de exemplo e lista de materiais para o sensor.
+
+   obs: o potenciômetro utilizado aparece nas duas listagens, embora apenas um potênciometro seja utilizado. O objetivo é que as duas listas de materiais sejam independentes e modulares.
+
+
