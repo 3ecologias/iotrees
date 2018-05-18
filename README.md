@@ -12,10 +12,43 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>
 
-
-Dendrometro de precisão para mensurar tamanho inicial e variações de crescimento do diâmetro das árvores (DAP - diametro a altura do peito com casca).
-
 Code by 3ecologias.net <root@3ecologias.net>
+
+
+Precision dendrometer for measuring initial size and growth variations of tree diameter (DBH - diameter at breast height with bark).
+
+
+* 1 lap lapV = ~ 0.5 volts (v) vcc 5v
+   * 1 lap lapC = ~ 7.9 cm
+   * extra perimeter cE = ~ 4 cm
+   * total perimeter cT = ~ 64 cm
+   * initial diameter dI = ~ 1.2732 cm
+   * final diameter dT = ~ 20.3718 cm
+   * red led: pre-calibration
+   * green led: mode of calculation of diameter (DAP) and growth (ICAd) in cm.
+   
+   steps:
+   1. adjust the sensor spool and attach the device to the tree with the device turned off;
+   2. Turn on the device to enable calibration mode, initial diameter measurement, growth and data cataloging;
+   3. The sensor calibration mode checks whether the spool has completed a complete revolution;
+   4. the measurement mode of the DAP and ICAd captures for 20 seconds the initial value of the diameter;
+   5. The growth mode collects the diameter value (DAP) and compares it with the last value of the DAP to register the diameter increase (ICAd);
+   6. The catalog mode stores, every minute, a CSV log on the SDCard with the DAP values: initial, final and ICAd.
+   7. To save the log, simply return the spool to the starting position and wait for the red LED to light up. After that, turn off the device and remove the SDCard.
+
+   info:
+   the printed-circuit / folder contains the PDF files for printed circuit board, the original file for editing by Fritizing (http://fritzing.org/), the protoboard assembly model, and the file with the list of required components.
+
+   the string-pot-am-2674 / folder contains the modeled sensor files for 3D printing, sample photos, and bill of materials for the sensor.
+
+   obs: the potentiometer used appears in both listings, although only one potentiometer is used. The aim is for the two bills of material to be independent and modular.
+
+An Arduino Mega was used for the prototype
+
+
+======== pt-BR ======
+
+Dendrômetro de precisão para mensurar tamanho inicial e variações de crescimento do diâmetro das árvores (DAP - diâmetro a altura do peito com casca).
 
    * 1 lap lapV =~ 0.5 volts (v) vcc 5v
    * 1 lap lapC =~ 7.9 cm
@@ -41,5 +74,7 @@ Code by 3ecologias.net <root@3ecologias.net>
    a pasta string-pot-am-2674/ contém os arquivos modelados do sensor para a impressão 3D, fotos de exemplo e lista de materiais para o sensor.
 
    obs: o potenciômetro utilizado aparece nas duas listagens, embora apenas um potênciometro seja utilizado. O objetivo é que as duas listas de materiais sejam independentes e modulares.
+
+	Foi utilizado um Arduino Mega para o protótipo
 
 
