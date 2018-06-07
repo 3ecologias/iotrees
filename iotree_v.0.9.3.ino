@@ -20,7 +20,7 @@
  *  3. o modo de calibragem do sensor verifica se o carretel realizou no mímino uma volta completa;
  *  4. o modo de medição do DAP e ICAd captura por 20 segundos o valor inicial do diâmetro;
  *  5. o modo de crescimento coleta, a cada minuto, o valor do diâmetro (DAP) e compara com o último valor do DAP para registrar o incremento do diâmetro (ICAd);
- *  6. o modo de catalogo armazena, a cada minuto, um log em CSV no SDCard com os valores do DAP: inicial, final e o ICAd. 
+ *  6. o modo de catalogo armazena, a cada minuto, um log em CSV no SDCard com os valores de hora, data e o DAP: inicial, final e o ICAd. 
  *  7. Para salvar o log, basta voltar o carretel para a posição inicial e aguardar o led vermelho acender. Depois disso, desligue o dispositivo e remova o SDCard.
 */
 
@@ -68,9 +68,9 @@ bool meansurementState = false;
 
 // global variables
 float sensorValue = 0;
-float lapC = 790; // perimetro (cm) x 100
+float lapC = 780; // perimetro (cm) x 100
 float lapV = 49; // volts (V) x 100
-float cE = 370; // perimetro (cm) x 100
+float cE = 200; // perimetro (cm) x 100
 float baseline = 49; // perimetro externo inicial
 int laps = 0;
 
